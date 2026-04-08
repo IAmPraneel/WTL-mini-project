@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Admin",
+    "email": "admin@hostel.com",
+    "password": "scrypt:32768:8:1$AOt92u7pezfvkG8F$8cb7e6b032c11950415d429d672f287aa6711af5f4c2018e927d523fab41c9fa4addd3184603509f0ed0d56459351e9ac7b689c73c9c642b558a57a7f0d3e1be",
+    "role": "admin",
+    "hostelBlock": "",
+    "roomNumber": ""
+  },
+  {
+    "id": 2,
+    "name": "Om",
+    "email": "Om@gmail.com",
+    "password": "scrypt:32768:8:1$q7mD85mW7vrZuc8p$398eec4da4b314677f7c840e69601e4333cf11e85622337b2a69b7b99bbd1f1f66133e034f51d329b508fad02869dc741cfbe33a8aaec1a1ecdf860ad935d3ad",
+    "role": "student",
+    "hostelBlock": "A",
+    "roomNumber": "2"
+  },
+  {
+    "id": 3,
+    "name": "Akshat",
+    "email": "akshat@gmail.com",
+    "password": "scrypt:32768:8:1$9VYtUZ69hua6njfK$84ea53942d52f40dd9a1b579a608f8d0cf36f7162653bcf0fbc5f807337921d9f821000983ad1c3482eb82465bb50c78206507833042fc42c8ef3dec166263b8",
+    "role": "student",
+    "hostelBlock": "A",
+    "roomNumber": "4"
+  }
+]

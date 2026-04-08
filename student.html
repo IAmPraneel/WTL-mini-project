@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <div class="d-flex justify-content-between">
+        <h2>My Complaints</h2>
+        <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+    </div>
+    <hr>
+    <div class="card mb-4">
+        <div class="card-header">Submit New Complaint</div>
+        <div class="card-body">
+            <form method="post" action="{{ url_for('add_complaint') }}">
+                <div class="mb-3"><label>Title</label><input type="text" name="title" class="form-control" required></div>
+                <div class="mb-3"><label>Description</label><textarea name="description" class="form-control" required></textarea></div>
+                <div class="mb-3"><label>Category</label>
+                    <select name="category" class="form-control">
+                        <option>Plumbing</option><option>Electrical</option><option>Furniture</option><option>Cleaning</option><option>Food</option><option>Other</option>
+                    </select>
+                </div>
+                <div class="mb-3"><label>Priority</label>
+                    <select name="priority" class="form-control">
+                        <option>Low</option><option>Medium</option><option>High</option><option>Urgent</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+    <h3>Complaint History</h3>
+    <table class="table table-bordered">
+        <thead>
+            <tr><th>Title</th><th>Category</th><th>Priority</th><th>Status</th><th>Admin Comment</th><th>Date</th></tr>
+        </thead>
+        <tbody>
+            {% for c in complaints %}
+            <tr>
+                <td>{{ c.title }}</td>
+                <td>{{ c.category }}</td>
+                <td>{{ c.priority }}</td>
+                <td>{{ c.status }}</td>
+                <td>{{ c.adminComment or '-' }}</td>
+                <td>{{ c.createdAt[:10] }}</td>
+            </tr>
+            {% else %}
+            <tr><td colspan="6">No complaints yet.</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

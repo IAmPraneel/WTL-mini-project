@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "studentId": 2,
+    "title": "Tap leak",
+    "description": "Tap leaks",
+    "category": "Plumbing",
+    "priority": "Medium",
+    "status": "Pending",
+    "adminComment": "Will check on weekend",
+    "createdAt": "2026-04-07T09:35:14.498410"
+  },
+  {
+    "id": 2,
+    "studentId": 3,
+    "title": "Fan not working",
+    "description": "Fan not working",
+    "category": "Electrical",
+    "priority": "High",
+    "status": "Rejected",
+    "adminComment": "please come next month\r\n",
+    "createdAt": "2026-04-07T12:03:42.685003"
+  },
+  {
+    "id": 3,
+    "studentId": 2,
+    "title": "Sub-par food quality",
+    "description": "last couple of weeks food has been burnt, specially the daal",
+    "category": "Food",
+    "priority": "Urgent",
+    "status": "Pending",
+    "adminComment": "",
+    "createdAt": "2026-04-07T12:05:46.528474"
+  }
+]
